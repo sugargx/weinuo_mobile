@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta name="applicable-device" content="mobile">
+<meta http-equiv="Access-Control-Allow-Origin" content="*.gongsibao.com">
+<link rel="stylesheet" href="css/new_public_style.css">
+<link rel="stylesheet" href="css/new_top_style.css">
+<link rel="stylesheet" href="css/bottom_style.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/gsb.tools-1.0.min.js"></script>    <meta name="keywords" content="商标注册">
+    <meta name="description" content="互联网经济时代，淘宝、京东等大型电商平台一再冲击着线下实体经济。很多老板选择开网店和实体店一并进行。据统计，淘宝和京东等平台开网站占据数量较大，其次就是天猫、亚马逊等。开过网店的人都知道，有些产品销售需要商标证书的。">
+    <title>想入驻淘宝、京东等网店，商标注册如何选择？  </title>
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/hyzx_style.css">
+    <link rel="stylesheet" href="css/hyzx_style_details.css">
+    <link rel="stylesheet" href="css/footer_banner_style.css">
+</head>
+<script type="text/javascript" language="javascript">
+    function search() {
+        $('form1').submit();
+    }
+
+    var path = ''
+    $(function () {
+        $.ajax({
+            url: "http://www.gongsibao.com/gongsibao-web/jee/user/info",
+            type: "get",
+            dataType: "json",
+            async: false,
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (data) {
+                if (data.code == 200) {
+                    var pk = data.data.mobilePhone;
+                    if (pk != "" && pk != null) {
+                        var html = '<a class="fr" href="JavaScript:logout();"> 注销</a><a class="fr" target="_top" href="/cmsapi/toGsbMemberCenter.api">' + pk + '</a>';
+                        $("#login-button").css("display", "none");
+                        $("#login").css("display", "none");
+                        $("#login").html(html);
+
+                    }
+                } else {
+                    var html = '<a href="/cmsapi/gsbLogin.jspx?returnUrl=' + window.location.toString() + '" target="_top">登录 </a>';
+                    $("#login").html(html);
+
+                }
+            }
+        });
+    })
+
+    function logout() {
+        $.ajax({
+            url: "http://www.gongsibao.com/gongsibao-web/web/account/accountloginout",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function () {
+                location.href = "";
+            }
+        });
+    }
+</script>
+<body data-role="none">
+<!--导航标题-->
+<!-- <div class="navigationTitle">知产播报</div> -->
+<!--公司宝-->
+<div class="logo">
+    <ul>
+        <li>
+            <a href="leftside.html"><div class="header-left"><div class="header-num-box">3</div></div></a>
+            <a href="http://m.gongsibao.com/"><img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/m/images/logo.png" id="logo-gsb" alt="公司宝Logo图片" style="margin-left:142px"></a>
+            <img src="images/logo-button.png" id="logo-button">
+            <div class="login_button" id="login"></div>
+        </li>
+    </ul>
+</div>
+<!--咨询详情页-->
+<div class="details-main">
+    <div class="Industry_information">
+        <div class="details-main-content">
+            <span id="content-title">想入驻淘宝、京东等网店，商标注册如何选择？  </span>
+            <div class="line">
+                <a class="source">来源:公司宝</a>
+                <a class="time">18-09-20</a>
+            </div>
+            <p style="unset!important;"><p>互联网经济时代，淘宝、京东等大型电商平台一再冲击着线下实体经济。很多老板选择开网店和实体店一并进行。据统计，淘宝和京东等平台开网站占据数量较大，其次就是天猫、亚马逊等。<strong>开过网店的人都知道，有些产品销售需要商标证书的。</strong>甚至在微信公众号、微博号等认证为企业号时都是要提供商标注册证书的。</p><p><br/></p><p><strong>开天猫店铺的老板们都清楚</strong>：天猫现在暂不接受未取得国家商标局颁发的商标注册或商标受理通知书的品牌开店申请的，想要入驻天猫不仅需要有自己的品牌，而且持有的商标是R标还是TM标都对入驻天猫需要交纳的保证金的金额有影响。</p><p><br/></p><p><strong>由此可见，想要在线上开一家店铺，注册商标是一个必不可少的条件！那么，想入驻淘宝、京东等网店，商标注册如何选择？应该提前准备好哪些商标？</strong></p><p><br/></p><p>首先，我们要在网店最核心的业务范围进行商标注册，一般来说，涉及到网店核心业务的类别有第9类、第35类以及第42类。</p><p><br/></p><p><strong>注册第35类商品商标</strong>：包含广告、商业管理和组织咨询、组织商业或广告展览、拍卖、将信息编入计算机数据库、数据通讯网络上的在线广告、贸易业务的专业咨询、进出口代理、替他人推销、人事管理咨询等。第35类是所有的电商、电销平台等必须注册的大类，否则将会存在侵权或被侵权风险，带来不必要的经济损失和品牌负面的影响。</p><p><br/></p><p><strong>注册第9类商标</strong>是考虑到网店做大后，通常还有可能需要开发自己的APP，所以第9类也是需要考虑进去的商标类别。</p><p><br/></p><p><strong>注册第42类商标</strong>包含计算机软件设计、开发、编程和一些和网站、搜索引擎有关的服务项目，与网店的服务项目相符合，同时与第9类的商品相对应，所以网店也会涉及到这类的注册。</p><p><br/></p><p>当然，注册了这些网店需要的商标类别外，别忘了注册自己需要开的网店的相关行业类别，比如25类的服装行业，36类的金融行业，29/30/31类的食品相关的行业等。</p><p><br/></p><p><strong>网店注册商标涉及到多个行业类别融合交叉，并非仅止于以上关联到的行业类别。</strong>实在拿不准自己需要注册哪些类别的，可以咨询专业的商标代理公司——公司宝。</p><p><br/></p></p>
+        </div>
+    </div>
+</div>
+<!--上一篇/下一篇-->
+<div class="page">
+    <div class="page_up">
+        <a>没有了</a>
+    </div>
+    <div class="page_down">
+        <a href="/mstatics/zcbb/20180917/6574.html" target="_top">下一篇</a>
+    </div>
+</div>
+<!--推荐阅读-->
+<div class="recommend">
+</div>
+<!--联系电话-->
+<div id="tel">联系电话: 4006-498-999</div>
+<script src="js/new_public.js"></script>
+<!--底部-->
+<div class="bottom_space">
+    <!--<div class="type">
+                <a target="_blank" href="/mstatics/H5dbcd/4744.jhtml">
+        <span class="fl">客户端</span></a>
+        <i class="fl">|</i>
+        <a target="_blank" href="/mstatics/H5dbcd/4745.jhtml"><span class="fl select">触屏版</span></a>
+        <i class="fl">|</i>
+        <a target="_blank" href="/mstatics/H5dbcd/4746.jhtml"><span class="fl">电脑版</span></a>
+        <div class="clearfix"></div>
+    </div>-->
+    <div class="Copyright_information">
+        <p>Copyright© 2016 汉唐信通（北京）科技有限公司版权所有</p><p>京ICP证150505号 京ICP备14043829号-2</p>
+        <!--<script>-->
+        <!--document.write(window.location.href);-->
+        <!--</script>-->
+</div>
+</div><!--底部导航-->
+
+<div class="footer-banner">
+    <ul>
+        <a target="_top" href="/">
+            <li class="fl">
+                <div class="footer-img" id="footer-img-01"></div>
+                <div class="h6" href="">首页</div>
+            </li>
+        </a>
+        <a target="_top" href="http://m.gongsibao.com/product/2018" >
+            <li class="fl">
+                <div class="footer-img" id="footer-img-02"></div>
+                <div class="h6">分类</div>
+            </li>
+        </a>
+        <a target="_top" href="/">
+            <li class="fl">
+                <div class="footer-img" id="footer-img-05"></div>
+                <div class="h6" href="">电话咨询</div>
+            </li>
+        </a>
+
+        <a target="_top" href="/mstatics/xxyzx/">
+            <li class="fl">
+                <div class="footer-img" id="footer-img-03"></div>
+                <div class="h6">资讯</div>
+            </li>
+        </a>
+        <a target="_blank"  onclick="openZoosUrl('chatwin');">
+            <li class="fl">
+                <div class="footer-img" id="footer-img-04"></div>
+                <div class="h6">咨询</div>
+            </li>
+        </a>
+        <div class="clear"></div>
+    </ul>
+</div>
+<!--置顶页面图标-->
+<a id="js-gototop" href="javascript:;">
+</a>
+<script src="js/public_swipe.js"></script>
+<script src="js/index.js"></script>
+<!--底部导航点击事件-->
+<script>
+    $(function () {
+        $("#footer-img-01").css("background", "url('images/footer-banner-active-01.png') no-repeat");
+        $("#footer-img-01").css("background-size", "contain");
+        $("#footer-img-01 + div").css("color", "#E4C514");
+        $("#footer-img-02").mouseenter(function () {
+            $(this).css("background", "url('images/footer-banner-active-02.png') no-repeat");
+            $(this).css("background-size", "contain");
+            $("#footer-img-02 + div").css("color", "#E4C514");
+        }), $("#footer-img-02").mouseleave(function () {
+            $(this).css("background", "url('images/footer-banner-white-02.png') no-repeat");
+            $(this).css("background-size", "contain");
+            $("#footer-img-02 + div").css("color", "#fff");
+        });
+        $("#footer-img-03").mouseenter(function () {
+            $(this).css("background", "url('images/footer-banner-active-03.png') no-repeat");
+            $(this).css("background-size", "contain");
+            $("#footer-img-03 + div").css("color", "#E4C514");
+        }), $("#footer-img-03").mouseleave(function () {
+            $(this).css("background", "url('images/footer-banner-white-03.png') no-repeat");
+            $(this).css("background-size", "contain");
+            $("#footer-img-03 + div").css("color", "#fff");
+        });
+        $("#footer-img-04").mouseenter(function () {
+            $(this).css("background", "url('images/footer-banner-active-04.png') no-repeat");
+            $(this).css("background-size", "contain");
+            $("#footer-img-04 + div").css("color", "#E4C514");
+        }), $("#footer-img-04").mouseleave(function () {
+            $(this).css("background", "url('images/footer-banner-white-04.png') no-repeat");
+            $(this).css("background-size", "contain");
+            $("#footer-img-04 + div").css("color", "#fff");
+        });
+    })
+
+    //以下GA统计代码
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-94112410-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</body>
+<!-- <script src="/r/cms/w3/mobile/js/kefu.js"></script> -->
+<!--上一篇下一篇点击事件-->
+<script>
+    $(".page .page_up").on('touchstart mousedown', function (e) {
+        $(".page .page_up").css("background", "#57BAFD");
+        $(".page .page_up a").css("color", "#ffffff");
+    });
+    $(".page .page_down").on('touchstart mousedown', function (e) {
+        $(".page .page_down").css("background", "#57BAFD");
+        $(".page .page_down a").css("color", "#ffffff");
+    });
+    $(".page .page_up").on('touchend  mouseup', function (e) {
+        $(".page .page_up").css("background", "#ffffff");
+        $(".page .page_up a").css("color", "#57BAFD");
+    });
+    $(".page .page_down").on('touchend  mouseup', function (e) {
+        $(".page .page_down").css("background", "#ffffff");
+        $(".page .page_down a").css("color", "#57BAFD");
+    });
+</script>
+</html>

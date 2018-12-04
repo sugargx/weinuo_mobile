@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta name="applicable-device" content="mobile">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title></title>
+<meta http-equiv="Access-Control-Allow-Origin" content="*.gongsibao.com">
+<link rel="stylesheet" href="css/new_public_style.css">
+<link rel="stylesheet" href="css/new_top_style.css">
+<link rel="stylesheet" href="css/bottom_style.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/gsb.tools-1.0.T.js"></script>    
+<meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui" charset="UTF-8">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <script src="js/jquery.mobile-1.3.2.min.js"></script>
+    <script src="js/idangerous.swiper.min.js"></script>
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/hyzx_style.css">
+    <link rel="stylesheet" href="css/dropload.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/footer_banner_style.css">
+</head>
+<script type="text/javascript" language="javascript">
+    function search() {
+        $('form1').submit();
+    }
+
+    var path = ''
+    $(function () {
+        $.ajax({
+            url: "http://www.gongsibao.com/gongsibao-web/jee/user/info",
+            type: "get",
+            dataType: "json",
+            async: false,
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (data) {
+                if (data.code == 200) {
+                    var pk = data.data.mobilePhone;
+                    if (pk != "" && pk != null) {
+                        var html = '<a class="fr" href="JavaScript:logout();"> 注销</a><a class="fr" target="_top" href="/cmsapi/toGsbMemberCenter.api">' + pk + '</a>';
+                        $("#login").html(html);
+                        $("#login-button").css("display", "none");
+                        $("#login").css("display", "none");
+                    }
+                } else {
+                    var html = '<a href="/cmsapi/gsbLogin.jspx?returnUrl=' + window.location.toString() + '" target="_top">登录 </a>';
+                    $("#login").html(html);
+
+                }
+            }
+        });
+    })
+
+    function logout() {
+        $.ajax({
+            url: "http://www.gongsibao.com/gongsibao-web/web/account/accountloginout",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function () {
+                location.href = "";
+            }
+        });
+    }
+</script>
+<body data-role="none">
+<!--公司宝-->
+<div class="logo">
+    <ul>
+        <li>
+            <a href="leftside.html"><div class="header-left"><div class="header-num-box">3</div></div></a>
+            <a href="http://m.gongsibao.com/"><img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/m/images/logo.png" id="logo-gsb" alt="公司宝Logo图片" style="margin-left:142px"></a>
+            <img src="images/logo-button.png" id="logo-button">
+            <div class="login_button" id="login"></div>
+        </li>
+    </ul>
+</div>
+<script src="js/new_public.js"></script>
+<!--资讯页导航图片-->
+<div class="zx-banner" style="background: url('http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/71dc740cbcb29acef6c1f088d9d0a767.png') no-repeat;background-size: 7.5rem 3.3rem;">
+</div>
+
+<!--卡片面板切换-->
+<div class="pg-main">
+    <div id="wrapper">
+        <div class="wrap">
+            <div class="tabs">
+                <span class="part active"><a href="#" hidefocus="true">创业学堂</a></span>
+                <span class="part"><a href="#" hidefocus="true">知产播报</a></span>
+                <span class="part"><a href="#" hidefocus="true">蜜宝头条</a></span>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="cyxt-slide">
+                        <div class="content-slide" id="cyxt">
+                            <!--创业学堂-->
+                            <div class="Industry_information opacity">
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/abfb98c4a6599b877fb03d66600057d9.png"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/cyxt/20180919/6577.html" >敲重点！电商法落地：微商、直播销售、淘宝个体都要办理营业执照！又有哪些影响呢？</a>
+                                    <span>《电子商务法》将自2019年1月1日起施行。此次通过的《电子商务法》有哪些亮点？微商、直播销售、淘宝个体...</span>
+                                </div>
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/fff58562453a589e77b01be260d59324.png"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/cyxt/20180918/6576.html" >公司注册经营范围5大常见误区，这些你需要避免！</a>
+                                    <span>经营范围是在注册公司时候要确定的，比如商务服务、技术咨询等等。在填写经营范围时很多人容易进入误区，...</span>
+                                </div>
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/705a0c3b5ce965f0b809a16471570c5f.png"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/cyxt/20180918/6575.html" >注册公司经营范围不知道如何写？看了它就不慌！</a>
+                                    <span>成立一家新公司，涉及到新公司注册经营范围的确定，经营范围应该怎么写？有哪些常见的误区呢？</span>
+                                </div>
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/819ced329772b99375aaec89c6fbe1d5.jpg"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/cyxt/20180912/6571.html" >电商法来了！微商、代购也要有营业执照，你知道吗？</a>
+                                    <span>微商、代购新时代，来了！一部震动了代购圈、微商圈的《中华人民共和国电子商务法》于9月4日出炉，将在20...</span>
+                                </div>
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/ce5b0e7daad206b1055a4170cec73ad8.png"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/cyxt/20180911/6565.html" >营业执照吊销≠公司注销！“吊销”与“注销”，你真的能分清？</a>
+                                    <span>有些公司因未按照工商部门的要求做年度事项报告或年检，营业执照被吊销，就认为既然已经没有营业执照了，...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" id="zcbb-slide">
+                        <div class="content-slide" id="zcbb">
+                            <!--知产播报-->
+                            <div class="Industry_information">
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/7534cbb031fba6b49fbc37711e240d45.png"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/zcbb/20180920/6578.html" >想入驻淘宝、京东等网店，商标注册如何选择？  </a>
+                                    <span>互联网经济时代，淘宝、京东等大型电商平台一再冲击着线下实体经济。很多老板选择开网店和实体店一并进行...</span>
+                                </div>
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/2459caf8f38a9a25093b8e99f6ecffcd.png"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/zcbb/20180917/6574.html" >看抖音快手短视频如何“申请商标”——完虐BATJ</a>
+                                    <span>短视频大爆炸时代来临！据统计，当前市场上的短视频玩家多达100多个，除了现有的短视频平台依旧还在奋力...</span>
+                                </div>
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/cc0dfcfa597e7878d9b2d1103af1925c.png"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/zcbb/20180903/6559.html" >爱奇艺诉今日头条？《延禧攻略》遭擅播引发“著作权维护”？</a>
+                                    <span>今日，一篇标题为“称《延禧攻略》遭擅播，爱奇艺诉今日头条索赔千万”的热搜文章引起了很多人的关注。</span>
+                                </div>
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/9a2102d1e7131197f1dd245996440c59.png"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/zcbb/20180829/6557.html" >《如懿传》刚开播，爆出注册商标被抢注，夺回“如懿传”商标不是没可能？</a>
+                                    <span>近期，继《延禧攻略》热播后，《如懿传》开播，清宫剧再次称霸荧屏！同样讲述了乾隆后宫那些事，欲与《延...</span>
+                                </div>
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/2e0768ff890b354d90b29f4c07f1319d.png"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/zcbb/20180829/6556.html" >“顶级流量”网络热词，开启申请商标注册新风向！</a>
+                                    <span>网络热词申请注册商标的现象已十分普遍，在网络热词兴起之初，就有人瞄准商机，将网络热词注册商标或公司...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" id="mbtt-slide">
+                        <div class="content-slide" id="mbtt">
+                            <!--蜜宝头条-->
+                            <div class="Industry_information">
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/1ab96cf69f308456d84973ecabf90773.jpg"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/mbtt/20180829/6555.html" >李克强会见世界知识产权组织总干事高锐,知识产权保护再升级！</a>
+                                    <span>国务院总理李克强8月28日上午在中南海紫光阁会见来华出席“一带一路”知识产权高级别会议的世界知识产权...</span>
+                                </div>
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/21b25b3ccd2c57f8ea94075514056c48.png"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/mbtt/20180817/6545.html" >公司宝GICC绽放光芒！企业服务赋能助力全球小微企业</a>
+                                    <span>8月8日，由畅捷通主办的第二届GICC大会，暨2018全球小微企业创新大会在北京国家会议中心召开。</span>
+                                </div>
+                                <div class="Industry_information-img">
+                                    <img src="http://gsb-public.oss-cn-beijing.aliyuncs.com/cms/51a3bc3378ec850f55330036db0813a2.png"/>
+                                </div>
+                                <div class="Industry_information-content">
+                                    <a target="_top" href="/mstatics/mbtt/20180817/6544.html" >公司宝荣获“2018中国双创好项目”双重奖项——大数据应用类、智慧应用类</a>
+                                    <span>自2014年9月国务院总理李克强在夏季达沃斯论坛上公开发出“大众创业、万众创新”的号召之后,各地对于中小...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--卡片面板js-->
+<script src="js/hyzx_dropload.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var tabsSwiper;
+        tabsSwiper = new Swiper('.swiper-container', {
+            speed: 500,
+            observer: true,
+            observeParents: true,
+            autoHeight: true, //高度随内容变化
+            onSlideChangeStart: function () {
+                var H = $(".content-slide").eq(tabsSwiper.activeIndex).height() + 35;
+                $(".swiper-wrapper").css('height', H + 'px');
+                $(".swiper-container").css('height', H);
+                $(".tabs .active").removeClass('active');
+                $(".tabs span").eq(tabsSwiper.activeIndex).addClass('active');
+            }
+        });
+        var flag02 = true;
+        var flag03 = true;
+        $(".tabs span").on('touchstart mousedown', function (e) {
+            e.preventDefault()
+            $(".tabs .active").removeClass('active');
+            $(this).addClass('active');
+            tabsSwiper.swipeTo($(this).index());
+            if ($(this).text() == "知产播报") {
+                if (flag02) {
+                    console.log(flag02)
+                    zcbb();
+                    flag02 = false;
+                    console.log(flag02)
+                } else {
+                    return;
+                }
+            }
+            if ($(this).text() == "蜜宝头条") {
+                if (flag03) {
+                    mbtt();
+                    flag03 = false;
+                } else {
+                    return;
+                }
+            }
+        });
+        $(".tabs span").click(function (e) {
+            e.preventDefault();
+        });
+    });
+</script>
+<!--知产播报-->
+<script>
+    function zcbb() {
+        var fist = 5;
+        var count = 5;
+        $('#zcbb-slide').dropload({
+            scrollArea: window,
+            loadDownFn: function (me) {
+                $.ajax({
+                    url: "/cmsapi/content/list.jspx",
+                    dataType: 'json',
+                    data: {
+                        channelIds: 515,
+                        channelOption: '1',
+                        format: '0',
+                        first: fist + '',
+                        count: count + '',
+                        orderBy: 4
+                    },
+                    async: false,
+                    success: function (data) {
+                        var html = '';
+                        console.log(data.length)
+                        if (data.length > 0) {
+                            for (var i = 0; i <= data.length; i++) {
+                                var title = data[i].title;
+                                console.log(title);
+                                var url = data[i].url;
+                                var typeImg = data[i].typeImg;
+                                console.log(typeImg);
+                                var description = data[i].description;
+                                if(description.length>50) description=description.slice(0,49).concat("...");
+                                var mobileUrl = data[i].mobileUrl;
+                                if (description == undefined) description = ' ';
+                                html += '<div class="Industry_information opacity">';
+                                html += '<div class="Industry_information-img">';
+                                html += '<img src="' + typeImg + '"/>';
+                                html += '</div>';
+                                html += '<div class="Industry_information-content">';
+                                html += '<a target="_top" href="' + mobileUrl + '">' + title + '</a>';
+                                html += '<span>' + description + '</span>';
+                                html += '</div>';
+                                html += '</div>';
+                                if ((i + 1) >= data.length) {
+                                    me.noData();
+                                    break;
+                                }
+                            }
+                        } else {
+                            me.noData();
+                        }
+                        setTimeout(function () {
+                            fist = fist + count;
+                            $("#zcbb").append(html);
+                            $(".swiper-container").css("height", "auto");
+                            me.resetload();
+                        }, 1000);
+                    }, error: function (xhr, type) {
+                        me.resetload();
+                        me.noData();
+                    }
+                })
+            }
+        });
+    }
+</script>
+<!--联系电话-->
+<div id="tel">联系电话: 4006-498-999</div>
+<!--底部-->
+<div class="bottom_space">
+    <!--<div class="type">
+                <a target="_blank" href="/mstatics/H5dbcd/4744.jhtml">
+        <span class="fl">客户端</span></a>
+        <i class="fl">|</i>
+        <a target="_blank" href="/mstatics/H5dbcd/4745.jhtml"><span class="fl select">触屏版</span></a>
+        <i class="fl">|</i>
+        <a target="_blank" href="/mstatics/H5dbcd/4746.jhtml"><span class="fl">电脑版</span></a>
+        <div class="clearfix"></div>
+    </div>-->
+    <div class="Copyright_information">
+        <p>Copyright© 2016 汉唐信通（北京）科技有限公司版权所有</p><p>京ICP证150505号 京ICP备14043829号-2</p>
+        <!--<script>-->
+        <!--document.write(window.location.href);-->
+        <!--</script>-->
+</div>
+</div><!--底部导航-->
+<div class="footer-banner">
+    <ul>
+        <a target="_top" href="/">
+            <li class="fl">
+                <div class="footer-img" id="footer-img-01"></div>
+                <div class="h6" href="">首页</div>
+            </li>
+        </a>
+        <a target="_top" href="http://m.gongsibao.com/product/2018" >
+            <li class="fl">
+                <div class="footer-img" id="footer-img-02"></div>
+                <div class="h6">分类</div>
+            </li>
+        </a>
+        <a target="_top" href="/">
+            <li class="fl">
+                <div class="footer-img" id="footer-img-05"></div>
+                <div class="h6" href="">电话咨询</div>
+            </li>
+        </a>
+
+        <a target="_top" href="/mstatics/xxyzx/">
+            <li class="fl">
+                <div class="footer-img" id="footer-img-03"></div>
+                <div class="h6">资讯</div>
+            </li>
+        </a>
+        <a target="_blank"  onclick="openZoosUrl('chatwin');">
+            <li class="fl">
+                <div class="footer-img" id="footer-img-04"></div>
+                <div class="h6">咨询</div>
+            </li>
+        </a>
+        <div class="clear"></div>
+    </ul>
+</div>
+<!--置顶页面图标-->
+<!-- <a id="js-gototop" href="javascript:;">
+</a> -->
+<script src="js/public_swipe.js"></script>
+<script src="js/index.js"></script>
+<!--加载更多按钮js-->
+
+<!-- <script src="js/jquery-1.7.2.min.js"></script> -->
+
+<script src="js/dropload.js"></script>
+<script src="js/jquery-1.7.2.min.js"></script>
+
+<!--创业学堂-->
+<script>
+    $(function () {
+        var fist = 5;
+        var count = 5;
+        $('#cyxt-slide').dropload({
+            scrollArea: window,
+            loadDownFn: function (me) {
+                $.ajax({
+                    url: "/cmsapi/content/list.jspx",
+                    dataType: 'json',
+                    data: {
+                        channelIds: 514,
+                        channelOption: '1',
+                        format: '0',
+                        first: fist + '',
+                        count: count + '',
+                        orderBy: 4
+                    },
+                    async: false,
+                    success: function (data) {
+                        var html = '';
+                        if (data.length > 0) {
+                            for (var i = 0; i <= data.length; i++) {
+                                console.log(data[i].title);
+                                var title = data[i].title;
+                                var url = data[i].url;
+                                var typeImg = data[i].typeImg;
+                                var description = data[i].description;
+                                var mobileUrl = data[i].mobileUrl;
+                                if (description == undefined) description = '';
+                                html += '<div class="Industry_information opacity">';
+                                html += '<div class="Industry_information-img">';
+                                html += '<img src="' + typeImg + '"/>';
+                                html += '</div>';
+                                html += '<div class="Industry_information-content">';
+                                html += '<a target="_top" href="' + mobileUrl + '">' + title + '</a>';
+                                html += '<span>' + description + '</span>';
+                                html += '</div>';
+                                html += '</div>';
+                                if ((i + 1) >= data.length) {
+                                    me.lock();
+                                    me.noData();
+                                    break;
+                                }
+                            }
+                        } else {
+                            me.noData();
+                        }
+                        setTimeout(function () {
+                            fist = fist + count;
+                            $("#cyxt").append(html);
+                            $(".swiper-container").css("height", "auto");
+                            me.resetload();
+                        }, 1000);
+
+                    }, error: function (xhr, type) {
+                        me.resetload();
+                    }
+                })
+            }
+        });
+
+    })
+</script>
+<!--底部导航点击事件-->
+<script>
+    $(function () {
+        $("#footer-img-01").css("background", "url('images/footer-banner-active-01.png') no-repeat");
+        $("#footer-img-01").css("background-size", "contain");
+        $("#footer-img-01 + div").css("color", "#E4C514");
+        $("#footer-img-02").mouseenter(function () {
+            $(this).css("background", "url('images/footer-banner-active-02.png') no-repeat");
+            $(this).css("background-size", "contain");
+            $("#footer-img-02 + div").css("color", "#E4C514");
+        }), $("#footer-img-02").mouseleave(function () {
+            $(this).css("background", "url('images/footer-banner-white-02.png') no-repeat");
+            $(this).css("background-size", "contain");
+            $("#footer-img-02 + div").css("color", "#fff");
+        });
+        $("#footer-img-03").mouseenter(function () {
+            $(this).css("background", "url('images/footer-banner-active-03.png') no-repeat");
+            $(this).css("background-size", "contain");
+            $("#footer-img-03 + div").css("color", "#E4C514");
+        }), $("#footer-img-03").mouseleave(function () {
+            $(this).css("background", "url('images/footer-banner-white-03.png') no-repeat");
+            $(this).css("background-size", "contain");
+            $("#footer-img-03 + div").css("color", "#fff");
+        });
+        $("#footer-img-04").mouseenter(function () {
+            $(this).css("background", "url('images/footer-banner-active-04.png') no-repeat");
+            $(this).css("background-size", "contain");
+            $("#footer-img-04 + div").css("color", "#E4C514");
+        }), $("#footer-img-04").mouseleave(function () {
+            $(this).css("background", "url('images/footer-banner-white-04.png') no-repeat");
+            $(this).css("background-size", "contain");
+            $("#footer-img-04 + div").css("color", "#fff");
+        });
+    })
+
+    //以下GA统计代码
+    // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    //     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    //     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    // ga('create', 'UA-94112410-1', 'auto');
+    // ga('send', 'pageview');
+</script>
+</body>
+<!-- <script src="/r/cms/w3/mobile/js/kefu.js"></script> -->
+</html>
